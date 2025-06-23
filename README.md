@@ -8,9 +8,19 @@ Cristal Villalba e RSG Brazil
 
 Carga horária total: 8 horas (2 dias)
 Formato: Online, com aulas ao vivo e/ou gravadas, materiais práticos e datasets reais do GEO
- Pré-requisitos: Conhecimentos básicos de biologia molecular e noções de estatística, alem de saber usar R - Rstudio
-Objetivo Geral
-Capacitar os participantes a realizar análise de expressão gênica diferencial (RNA-seq) com DESeq2, utilizando tanto a plataforma gráfica Galaxy quanto scripts em R, com interpretação de resultados e visualização de dados.
+
+
+
+ * Pré-requisitos: Conhecimentos básicos de biologia molecular e noções de estatística, alem de saber usar R - Rstudio
+
+
+* Objetivo Geral
+
+
+   * Capacitar os participantes a realizar análise de expressão gênica diferencial (RNA-seq) com DESeq2, utilizando tanto a plataforma gráfica Galaxy quanto scripts em R, com interpretação de resultados e visualização de dados.
+
+
+
 Módulo 1 – Introdução ao RNA-seq e Preparação de Dados (2h)
 Conteúdo:
 Fundamentos de RNA-seq: como funciona, o que mede, tipos de experimento
@@ -39,6 +49,11 @@ Alinhar leituras com HISAT2
 
 
 Gerar matriz de contagem com featureCounts
+
+
+
+
+
 Módulo 2 – Análise com DESeq2 no R (2h)
 Conteúdo:
 Importação e manipulação de matrizes de contagem
@@ -61,6 +76,12 @@ Filtrar genes com padj < 0.05 e log2FoldChange > 1
 
 
 Gerar planilhas com os principais genes
+
+
+
+
+
+
 Módulo 3 – Visualizações e Enriquecimento Funcional (2h)
 Conteúdo:
 Gráficos com DESeq2: MA plots, PCA, heatmaps, volcano plots
@@ -77,6 +98,10 @@ Gerar gráficos de qualidade de análise
 
 
 Interpretar principais vias e funções alteradas
+
+
+
+
 Módulo 4 – Comparando Galaxy vs R e Aplicações Reais (2h)
 Conteúdo:
 Comparando fluxos em Galaxy e R
@@ -110,7 +135,12 @@ Listas de comandos e funções úteis
 
 
 Templates de relatórios e gráficos
-Objetivos de Aprendizagem
+
+
+
+
+* Objetivos de Aprendizagem
+
 Ao final do curso, o participante será capaz de:
 Compreender o fluxo de trabalho completo de análise RNA-seq
 
