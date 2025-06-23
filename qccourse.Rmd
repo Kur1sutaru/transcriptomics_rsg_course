@@ -1,0 +1,88 @@
+---
+title: "qualitycontrol"
+author: "cristal_villalba"
+date: "2025-06-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+---
+title: "Controle de Qualidade com FastQC e MultiQC"
+output: html_document
+---
+
+## 🎯 Objetivo
+
+Avaliar a qualidade de dados RNA-seq brutos usando FastQC e MultiQC, e aprender a interpretar os gráficos para decidir sobre o pré-processamento (como trimming de adaptadores).
+
+---
+
+## 🧪 O que é FastQC?
+
+O **FastQC** é uma ferramenta de QC que analisa arquivos `.fastq` e gera relatórios gráficos com os seguintes indicadores:
+
+### 📈 1. **Per base sequence quality**
+- Mostra a qualidade de cada base ao longo da leitura (Phred Score).
+- Valores acima de 28 são considerados bons.
+- Uma queda de qualidade nas últimas bases é comum.
+
+### 🧬 2. **GC content**
+- Avalia a distribuição de conteúdo GC.
+- Deve ser aproximadamente normal e próxima ao valor esperado do organismo (ex: ~50% em humanos).
+- Um pico secundário pode indicar contaminação.
+
+### 🔗 3. **Adapter content**
+- Detecta a presença de adaptadores (sequências técnicas).
+- Presença alta indica a necessidade de *trimming* com ferramentas como Trimmomatic ou fastp.
+
+---
+
+## 🔄 Rodando FastQC e MultiQC no Galaxy
+
+### Etapas:
+
+1. **Acesse:** https://usegalaxy.org
+2. **Importe arquivos .fastq.gz** do seu experimento.
+3. **Procure por “FastQC”** na barra de ferramentas à esquerda.
+4. **Execute FastQC** para cada amostra (pode selecionar várias de uma vez).
+5. Após completar, **rode o “MultiQC”** para compilar todos os relatórios em um só.
+
+---
+
+## 🧠 Como interpretar os resultados
+
+- 🟢 Se a **qualidade por base** for boa (>28) até o final, **não é necessário trimming**.
+- 🔴 Se houver **queda acentuada nas últimas bases**, **recomenda-se trimming das extremidades 3’**.
+- ⚠️ Se houver **presença de adaptadores (>10-15%)**, **trimming com adaptador é essencial**.
+- 📊 Se o **GC Content** tiver dois picos ou desvio do esperado, verifique contaminação.
+
+---
+
+## 🖼️ Exemplo de saída do MultiQC
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("multiqc_example.png")
+
