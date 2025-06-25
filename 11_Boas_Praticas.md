@@ -1,18 +1,18 @@
 # 🧬 Análise de RNA-seq com DESeq2 no Galaxy
 
 ## 📚 Sumário <!-- TOC -->
-- [📌 Objetivo](#-objetivo)
-- [⚠️ Principais Armadilhas e Como Resolver](#️-principais-armadilhas-e-como-resolver)
-  - [1. Problemas de Convergência](#1-problemas-de-convergência)
-  - [2. Outliers Fortes](#2-outliers-fortes)
-  - [3. Dados Faltantes ou Mal Formatados](#3-dados-faltantes-ou-mal-formatados)
-  - [4. Normalização Inadequada](#4-normalização-inadequada)
-  - [5. Modelo Experimental Incorreto](#5-modelo-experimental-incorreto)
-- [🛠️ Ferramentas no Galaxy Recomendadas](#️-ferramentas-no-galaxy-recomendadas)
-- [✅ Exemplo Prático](#-exemplo-prático)
-- [📚 Referências](#-referências)
+[📌 Objetivo](#-objetivo)
+[⚠️ Principais Armadilhas e Como Resolver](#️-principais-armadilhas-e-como-resolver)
+[1. Problemas de Convergência](#1-problemas-de-convergência)
+[2. Outliers Fortes](#2-outliers-fortes)
+[3. Dados Faltantes ou Mal Formatados](#3-dados-faltantes-ou-mal-formatados)
+[4. Normalização Inadequada](#4-normalização-inadequada)
+[5. Modelo Experimental Incorreto](#5-modelo-experimental-incorreto)
+[🛠️ Ferramentas no Galaxy Recomendadas](#️-ferramentas-no-galaxy-recomendadas)
+[✅ Exemplo Prático](#-exemplo-prático)
+[📚 Referências](#-referências)
 
----
+
 
 ## 📌 Objetivo
 Realizar análise de expressão diferencial usando **DESeq2** no **Galaxy**, evitando erros comuns como:
@@ -22,7 +22,7 @@ Realizar análise de expressão diferencial usando **DESeq2** no **Galaxy**, evi
 - Normalização inadequada
 - Modelo experimental incorreto
 
----
+
 
 ## ⚠️ Principais Armadilhas e Como Resolver
 
@@ -37,7 +37,7 @@ Realizar análise de expressão diferencial usando **DESeq2** no **Galaxy**, evi
 - Ative `independent filtering = TRUE` no Galaxy.
 - Verifique se há replicatas biológicas suficientes (mínimo 3 por grupo).
 
----
+
 
 ### 2. Outliers Fortes
 **Sintoma:** Genes com valores extremos e estatísticas incoerentes.
